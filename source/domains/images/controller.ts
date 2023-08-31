@@ -39,6 +39,12 @@ class ImagesController {
 
         return true;
     }
+
+    async updateOne(_id: string, data: ImageCore): Promise<boolean> {
+        await this.odm.updateOne({ _id }, { ...data });
+
+        return true;
+    }
 }
 
 export const Images = new ImagesController();

@@ -18,6 +18,15 @@ const schema = new mongoose.Schema({
         required: true,
         unique:   true,
     },
+    title: {
+        type:   String,
+        // required: true,
+        unique: false,
+    },
+    isFavourite: {
+        type: Boolean,
+        // required: true,
+    },
 }, {
     id:         true,
     versionKey: false,
