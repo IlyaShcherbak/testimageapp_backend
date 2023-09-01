@@ -34,9 +34,6 @@ export const insertMany = async (req: IRequest, res: Response) => {
         }));
 
         const data = await Images.insertMany(imagesUrlsArray);
-        // const mappedData = data.map(({ imageUrl, public_id, isFavourite, title }) => (
-        //     { imageUrl, public_id, isFavourite, title }
-        // ));
 
         res.status(200).json(data);
     } catch (error) {

@@ -20,12 +20,10 @@ const schema = new mongoose.Schema({
     },
     title: {
         type:   String,
-        // required: true,
         unique: false,
     },
     isFavourite: {
         type: Boolean,
-        // required: true,
     },
 }, {
     id:         true,
